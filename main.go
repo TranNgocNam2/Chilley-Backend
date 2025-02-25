@@ -17,7 +17,6 @@ func main() {
 		log.Fatal(err)
 		return
 	}
-	fmt.Println(cfg)
 	corsConfig := cors.Config{
 		AllowOrigins:     []string{cfg.CorsProd, cfg.CorsDev},
 		AllowMethods:     config.AllowMethods,
@@ -25,7 +24,6 @@ func main() {
 		AllowCredentials: true,
 		MaxAge:           12 * time.Hour,
 	}
-	fmt.Println(corsConfig.AllowOrigins)
 	router.Use(cors.New(corsConfig))
 
 	//Load routes
