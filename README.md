@@ -41,7 +41,7 @@ docker push <docker-hub-username>/<image-name>
 ```sh
 ssh -i "<your-key.pem>" ec2-user@<your-ec2-ip>
 ```
-- If you get `Permission denied`, run:
+- If you use **Windows** and get `Permission denied`, run the following commands:
 ```sh
 icacls "C:\path\to\your-key.pem" /inheritance:r
 icacls "C:\path\to\your-key.pem" /grant:r %username%:R
